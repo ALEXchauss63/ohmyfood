@@ -1,93 +1,96 @@
+// Importation du module de couleurs
+@use "./colors.scss";
+
 // Styles pour la classe .logo
 .logo {
-    text-align: center;
-    font-family: "Shrikhand";
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Shrikhand";
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// Styles pour la classe .ville
+.ville {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: colors.$ville-background-color;
+  height: 3rem;
+  font-weight: 500;
+
+  i {
+    margin-right: 10px;
   }
 
-  // Styles pour la classe .ville
-  .ville {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eaeaea;
-    height: 3rem;
+  .ville_texte {
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+  }
+}
+
+// Styles pour la classe .reservation
+.reservation {
+  background-color: colors.$reservation-background-color;
+  font-family: "Roboto";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+
+  h3 {
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    margin: 2rem 0;
+  }
+
+  button {
+    margin-top: 2rem;
+    background: linear-gradient(90deg, colors.$reservation-button-gradient-start 0%, colors.$reservation-button-gradient-end 100%);
+    border: none;
+    color: white;
+    width: 218px;
+    height: 50px;
+    border-radius: 30px;
     font-weight: 500;
-
-    i {
-      margin-right: 10px;
-    }
-
-    .ville_texte {
-      margin: 0;
-      font-family: "Roboto";
-      font-size: 1.5rem;
-    }
   }
+}
 
-  // Styles pour la classe .reservation
-  .reservation {
-    background-color: #f6f6f6;
-    font-family: "Roboto";
+// Styles pour la classe .fonctionnement
+.fonctionnement {
+  font-family: "Roboto";
+  max-width: 600px;
+  margin: 0 auto;
+
+  h3 {
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-
-    h3 {
-      font-weight: 700;
-      font-size: 40px;
-      margin: 0;
-    }
-
-    p {
-      font-weight: 300;
-      font-size: 18px;
-      margin: 2rem 0;
-    }
-
-    button {
-      margin-top: 2rem;
-      background: linear-gradient(90deg, #9356dc 0%, #ff79da 100%);
-      border: none;
-      color: white;
-      width: 218px;
-      height: 50px;
-      border-radius: 30px;
-      font-weight: 500;
-    }
   }
-
-  // Styles pour la classe .fonctionnement
-  .fonctionnement {
-    font-family: "Roboto";
-    max-width: 600px;
-    margin: 0 auto;
-
-    h3 {
-      font-weight: 700;
-      font-size: 40px;
-      margin: 0;
-      text-align: center;
-    }
-    ol {
-      list-style-type: none;
-      counter-reset: etape;
-      padding: 0;
-    }
-    li {
-      counter-increment: etape;
-      margin-bottom: 15px;
-    }
-    li:before {
-      content: counter(etape);
-      font-weight: bold;
-      margin-right: 20px;
-    }
-    li i {
-      margin-right: 20px;
-    }
+  ol {
+    list-style-type: none;
+    counter-reset: etape;
+    padding: 0;
   }
+  li {
+    counter-increment: etape;
+    margin-bottom: 15px;
+  }
+  li:before {
+    content: counter(etape);
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  li i {
+    margin-right: 20px;
+  }
+}
