@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   height: 3rem;
   font-weight: 500;
 }
@@ -28,7 +28,7 @@
 }
 
 .reservation {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   font-family: "Roboto";
   text-align: center;
   display: flex;
@@ -48,14 +48,43 @@
   margin: 2rem 0;
 }
 .reservation button {
-  margin-top: 2rem 0;
-  background: linear-gradient(90deg, #9356DC 0%, #FF79DA 100%);
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #9356dc 0%, #ff79da 100%);
   border: none;
   color: white;
   width: 218px;
   height: 50px;
   border-radius: 30px;
   font-weight: 500;
+}
+
+.fonctionnement {
+  font-family: "Roboto";
+  max-width: 600px;
+  margin: 0 auto;
+}
+.fonctionnement h3 {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+.fonctionnement ol {
+  list-style-type: none;
+  counter-reset: etape;
+  padding: 0;
+}
+.fonctionnement li {
+  counter-increment: etape;
+  margin-bottom: 15px;
+}
+.fonctionnement li:before {
+  content: counter(etape);
+  font-weight: bold;
+  margin-right: 20px;
+}
+.fonctionnement li i {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
